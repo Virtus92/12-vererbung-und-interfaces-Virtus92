@@ -18,5 +18,17 @@
 
 Dies wäre die erste Art der Vererbung:
 - eine **Basisklasse**, die alle **Gemeinsamkeiten** definiert
-- je Anwendungsfall (in unserem Beispiel: Krieger, Elf und Zauberer), eine **spezifische Klasse**, welche von der Basisklasse erbt und die **Unterschiede** in der jeweiligen spezifischen Klasse implementiert. 
+- je Anwendungsfall (in unserem Beispiel: Krieger, Elf und Zauberer), eine **spezifische Klasse**, welche von der Basisklasse erbt und die **Unterschiede** in der jeweiligen spezifischen Klasse implementiert.
 
+## abstrakte Klasse oder normale Klasse?
+
+Die **Basisklasse** definiert also alle gemeinsamen Attribute, aber auch die gemeinsamen Methoden und implementiert diese. 
+
+Die **spezifischen Klassen** erben all diese gemeinsamen Attribute bzw. Methoden und können zusätzliche Attribute und Methoden aufweisen. Auch können gemeinsame Methoden in der spezifischen Klasse durch eine spezifischere Implementierung überschrieben werden.
+
+In manchen Fällen macht es keinen Sinn, eine eigene Instanz der **Basisklasse** erstellen zu können, weil das entstandene Objekt nicht alles bietet, was es braucht, um sinnvoll zu sein. In einem solchen Falle wird der Modifer **abstract** verwendet. **abstract**-Klassen sind solche Klassen, von denen geerbt werden muss, um sie verwenden zu können. 
+
+> [!IMPORTANT]
+> **abstract**-Klassen sind solche Klassen, von denen geerbt werden muss, um sie verwenden zu können. 
+>
+> ACHTUNG! Von **final**-Klassen kann, wie der Name schon sagt, nicht geerbt werden.

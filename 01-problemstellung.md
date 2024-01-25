@@ -14,6 +14,6 @@ Um dies zu realisieren werden wir in den folgenden Kapiteln darstellen, wie Vere
 
 Weiters gilt eine weitere Grundregel: 
 
-> *jede Software soll möglichst modular aufgebaut werden, damit Teile leicht ausgetauscht werden!*
+> *jede Software soll möglichst modular aufgebaut werden, damit Teile leicht ausgetauscht werden können!*
 
 Zu diesem Thema werden wir lernen, was Schnittstellen sind und wie diese anzuwenden sind.
