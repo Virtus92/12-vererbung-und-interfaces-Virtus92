@@ -214,3 +214,4 @@ Obwohl wir also die einzelnen Instanzen in einer Liste von RPGCharacter speicher
 Das heißt aragon wird zwar zu der Liste von Charakteren als RPGCharacter hinzugefügt, bleibt aber
 trotzdem noch ein Krieger genauso wie gandalf ein Zauberer bleibt.
 
+Zurück zur [Startseite](README.md)
