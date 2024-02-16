@@ -7,8 +7,8 @@ Der Teilnehmer/die Teilnehmerin kann nach erfolgreicher Absolvierung dieses Them
 - erklären, wie die Vererbung von Klassen funktioniert
 - im Rahmen der Aufgaben, die Vererbung sinnvoll einsetzen
 - ein Programm schreiben, das den Clean-Code-Anforderungen entspricht
-- seinen\*ihren Code erklären
-- hat seinen\*ihren Code in GitHub eingecheckt
+- seinen:ihren Code erklären
+- hat seinen:ihren Code in GitHub eingecheckt
 
 ## Inhaltsverzeichnis
 

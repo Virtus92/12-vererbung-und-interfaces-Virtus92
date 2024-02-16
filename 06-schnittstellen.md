@@ -2,15 +2,15 @@
 
 ## Beispiel
 
-> Ich möchte mit meinem RPG-Spiel verschiedenste Datenspeicherungsmöglichkeiten anbieten, damit meine Kunden\*innen jene Möglichkeit wählen können, die ihnen am liebsten ist/bei ihnen bereits im Einsatz ist. Ich möchte aber meine Business Logik nicht jedes Mal neu schreiben.
+> Ich möchte mit meinem RPG-Spiel verschiedenste Datenspeicherungsmöglichkeiten anbieten, damit meine Kunden:innen jene Möglichkeit wählen können, die ihnen am liebsten ist/bei ihnen bereits im Einsatz ist. Ich möchte aber meine Business Logik nicht jedes Mal neu schreiben.
 
 ## Wie könnte man die Business Logic von der Datenspeicherungslogik trennen?
 
 Um die Business Logic von der Datenspeicherungslogik zu trennen, definieren wir eine Schnittstelle, welche die Namen bzw. Signatur der CRUD-Methoden festlegt (im Interface wird lediglich die Signatur der Methoden definiert. Die Methoden selbst sind in einer Schnittstelle nicht implementiert) und jene Objekte zurückgibt, welche die Business Logik braucht, um zu arbeiten. 
 
-### Java
-
 ```java
+// Java
+
 public interface IDataPersistingMechanism{
 
     public int createRPGPlayer(RPGPlayer player);
@@ -25,9 +25,8 @@ public interface IDataPersistingMechanism{
 }
 ```
 
-### C#
-
-```c#
+```csharp
+// C#
 
 ```
 
@@ -37,11 +36,11 @@ In einem zweiten Schritt schreibt man den Code für die jeweilige Datenbank (MyS
 
 Hier ein Beispiel von 2 Implementierung der oben angeführten Schnittstelle
 
-### Java
-
 In einem File RPGPlayersInMySQL.java:
 
 ```java
+// Java
+
 public class RPGPlayersInMySQL implements IDataPersistingMechanism {
 
     private static java.sql.Connection connection;
@@ -85,6 +84,8 @@ public class RPGPlayersInMySQL implements IDataPersistingMechanism {
 In einem File RPGPlayersAsJSONFile.java:
 
 ```java
+// Java
+
 public class RPGPlayersAsJSONFile implements IDataPersistingMechanism {
     
     private java.io.File jsonFile;
@@ -125,9 +126,9 @@ public class RPGPlayersAsJSONFile implements IDataPersistingMechanism {
 }
 ```
 
-### C#
+```csharp
+// C#
 
-```c#
 
 ```
 
@@ -139,9 +140,9 @@ Die Schnittstelle wird als Objekttyp in der Business Logik verwendet, aber das O
 
 In unseren Beispielen würde es wie folgt aussehen.
 
-### Java
-
 ```java
+// Java
+
 IDataPersistingMechanism dataPersisting = null;
 
 // Hier der einzige Part in der Business Logik, in dem die tatsächlich verwendete Implementierung definiert wird
@@ -162,9 +163,9 @@ dataPersisting.createRPGPlayer(player);
 
 ```
 
-### C#
+```csharp
+// C#
 
-```c#
 
 ```
 Zurück zur [Startseite](README.md)

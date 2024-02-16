@@ -6,7 +6,7 @@ Da die Grundidee in der objektorientierten Programmierung die ist, dass jede Gel
 
 Man könnte es auch so formulieren, dass ein guter Entwickler möglichst "faul" sein sollte, im Sinne von: 
 
-> *Was ein\*e Andere\*r schon gemacht hat, nutze ich, statt es selbst zu machen!*
+> *Was ein:e Andere:r schon gemacht hat, nutze ich, statt es selbst zu machen!*
 
 Um dies zu realisieren werden wir in den folgenden Kapiteln darstellen, wie Vererbung in der Softwareentwicklung funktioniert und was abstract-Klassen und -Methoden sind.
 
