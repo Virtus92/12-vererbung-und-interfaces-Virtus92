@@ -38,9 +38,11 @@ implement a test program Main.java, that creates several instances and prints ar
 
 ### Abnahmekriterien
 
-- Das Programm entspricht den Anforderungen
+- Das Programm entspricht den oben angeführten Anforderungen.
 - Die Vererbung wird überall dort verwendet, wo es Sinn macht, insbesondere wenn eine Klasse ein Sonderfall einer anderen Klasse darstellt.
 - Die Unittests decken alle Normal- und Grenzfälle ab.
-- Die Variablen-, Methoden- und Klassennamen sind aussagekräftig
+- Die Variablen-/Methoden-/Klassennamen sind aussagekräftig.
+- Der Code ist gut strukturiert (Siehe Clean Code).
+- Der Code ist in GITHub eingecheckt.
 
 Zurück zur [Startseite](README.md)
