@@ -4,11 +4,13 @@ Bisher haben wir bereits gelernt, was eine `abstract`-Klasse ist und wie diese z
 
 In diesem Kapitel gehen wir auf eine weitere Möglichkeit den Modifier `abstract` zu verwenden. 
 
-Im letzten Beispiel haben wir gesehen, wie man ermitteln kann, ob ein Objekt eine Instanz einer bestimmten Klasse ist, um sicherzustellen, dass man die spezifische Methode dieser Klasse aufrufen darf. Weiters mussten wir ein Type Cast durchführen, damit das Objekt tatsächlich eine Instanz dieser Klasse ist.
+Im letzten Beispiel haben wir ermittelt, ob ein Objekt eine Instanz einer bestimmten Klasse ist, um sicherzustellen, dass man die spezifische Methode der jewiligen Klasse (z.B. Warrior oder Wizard) aufrufen darf. Weiters mussten wir ein Type Cast durchführen, um das Objekt tatsächlich eine Instanz der Klasse Warrior/Wizard/Elf ist.
 
 ## `abstract`-Methode
 
-Wie schön wäre es, wenn wir diese ganzen Überprüfungen nicht machen müssten. Stellen wir uns vor, wir haben 100 solche spezifische Charaktertypen (sprich 100 Subklassen von RPGCharacter). In diesem Falle würde die Methode richtig mühsam sein! Natürlich gibt es eine schönere Variante: 
+Wie könnten wir es lösen, um diese ganzen Überprüfungen nicht machen zu müssen. Stellen wir uns vor, wir haben 100 solche spezifische Charaktertypen (sprich 100 Subklassen von RPGCharacter). In diesem Falle würde die Methode richtig mühsam sein! 
+
+Um diese Fall abzudecken gibt es eine bessere Variante: eine `abstract`-Methode.
 
 ```java
 // Java
@@ -28,7 +30,7 @@ public abstract class RPGCharacter {
 
 Was passiert hier? 
 
-Mit dieser `abstract`-Methode erzwingen wir, dass Subklassen eine Methode `showOff()` haben müssen. 
+Mit einer `abstract`-Methode erzwingen wir, dass Subklassen von `RPGCharacter` eine Methode `showOff()` haben müssen. 
 
 ## Überschreiben der `abstract`-Methode in den Subklassen
 
@@ -83,7 +85,7 @@ public class Elf extends RPGCharacter {
 }
 ```
 
-Hier ist anzumerken, dass die Methode `showOff()` die gleichnamige Methode in der Basisklasse `RPGCharacter` überschreibt. Dies erfolgt mit der Annotation `@Override`, direkt oberhalb der Signatur der Methode. Mit dieser Methode, wenn eine Instanz von RPGCharakter die `showOff()`-Methode aufruft, wird dieser Aufruf automatisch in die entsprechende Klasse weitergeleitet.
+Hier ist anzumerken, dass die Methode `showOff()` die gleichnamige Methode in der Basisklasse `RPGCharacter` überschreibt. Dies erfolgt mit der Annotation `@Override`, direkt oberhalb der Signatur der Methode. Mit dieser Methode, wenn eine Instanz von RPGCharakter die `showOff()`-Methode aufruft, wird dieser Aufruf automatisch an die entsprechende Klasse weitergeleitet.
 
 ### C# 
 
@@ -95,7 +97,7 @@ Hier ist anzumerken, dass die Methode `showOff()` die gleichnamige Methode in de
 
 ## `showOff()` im Programm aufrufen
 
-Das Ganze haben wir jetzt gemacht, um genau folgendes zu erreichen:
+Der neue Code und viel kürzer als vorher und sieht folgendermaßen aus:
 
 ```java
 // Java
@@ -111,7 +113,7 @@ for (RPGCharacter character : allCharacters) {
 ```
 
 
-Das Ergebnis sieht genauso aus wie vorhin:
+Das Ergebnis sieht in der Konsole genauso aus wie vorhin:
 
 ```
 pheeew 🗡️ 
@@ -119,6 +121,6 @@ Magic! 🪄 ✨️
 ---> 💚
 ```
 
-Ist das nicht schön, mit so wenig Code, so viel erreichen zu können! Und jetzt ist es wirklich egal, wieviele Subklassen von `RPGCharacter` es gibt. Diese Schleife wird immer funktionieren!
+Jetzt ist es wirklich irrelevant, wie viele Subklassen von `RPGCharacter` es gibt. Diese Schleife wird immer funktionieren!
 
 Zurück zur [Startseite](README.md)

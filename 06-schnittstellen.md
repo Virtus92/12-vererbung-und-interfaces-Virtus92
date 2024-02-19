@@ -1,17 +1,23 @@
 # Schnittstellen
 
+In diesem Kapitel behandeln wir das Thema Schnittstellen und stellen diese anhand eines Beispiels dar, in dem wir die Business Logik von der Persistierungslogik (wie die Daten gespeichert werden) trennen. Wir implementieren diese Trennung hier.
+
+Ein typisches Beispiel, das wir bereits genutzt haben, ist das `interface` `List` (Java) bzw. `IList` (C#), das viele verschiedene Implementierungen hat: `ArrayList`, `LinkedList`, ... (Java)
+
+Ein weiteres typisches Beispiel in Java ist `Comparable`.
+
 ## Beispiel
 
-> Ich möchte mit meinem RPG-Spiel verschiedenste Datenspeicherungsmöglichkeiten anbieten, damit meine Kunden:innen jene Möglichkeit wählen können, die ihnen am liebsten ist/bei ihnen bereits im Einsatz ist. Ich möchte aber meine Business Logik nicht jedes Mal neu schreiben.
+> Ich möchte mit meinem RPG-Spiel verschiedenste Datenspeicherungsmöglichkeiten anbieten, damit meine Kunden:innen jene Möglichkeit wählen können, die ihnen am liebsten ist/bei ihnen bereits im Einsatz ist. Ich möchte aber meine Business Logik nicht für jede Möglichkeit neu schreiben müssen.
 
-## Wie könnte man die Business Logic von der Datenspeicherungslogik trennen?
+## Trennung der Business Logik von der Datenspeicherung (Persistierung)
 
-Um die Business Logic von der Datenspeicherungslogik zu trennen, definieren wir eine Schnittstelle, welche die Namen bzw. Signatur der CRUD-Methoden festlegt (im Interface wird lediglich die Signatur der Methoden definiert. Die Methoden selbst sind in einer Schnittstelle nicht implementiert) und jene Objekte zurückgibt, welche die Business Logik braucht, um zu arbeiten. 
+Um die Business Logik von der Persistierungslogik zu trennen, definieren wir eine Schnittstelle (`interface`), welche die Namen bzw. Signatur der CRUD-Methoden festlegt (im Interface wird lediglich die Signatur der Methoden definiert. Die Methoden selbst sind in einer Schnittstelle NICHT implementiert) und jene Objekte zurückgibt, welche die Business Logik braucht, um zu arbeiten. 
 
 ```java
 // Java
 
-public interface IDataPersistingMechanism{
+public interface DataPersistingMechanism{
 
     public int createRPGPlayer(RPGPlayer player);
 
@@ -30,18 +36,18 @@ public interface IDataPersistingMechanism{
 
 ```
 
-## Und wie erfolgt die tatsächliche Persistierung?
+## Persistierung anhand des erstellten Interfaces
 
-In einem zweiten Schritt schreibt man den Code für die jeweilige Datenbank (MySQL, Oracle, MSSQL, ...) bzw. für das Filesystem. Dieser Code implementiert die Schnittstelle, indem alle Methodensignaturen aus der Schnittstellung eine Implementierung bekommen.
+In einem zweiten Schritt erstellt man den Code für die jeweilige Datenbank (MySQL, Oracle, MSSQL, ...) bzw. für das Filesystem. Dieser Code implementiert die Schnittstelle, indem alle Methodensignaturen aus der Schnittstelle eine Implementierung bekommen.
 
-Hier ein Beispiel von 2 Implementierung der oben angeführten Schnittstelle
+Hier ein Beispiel von 2 Implementierungen der oben angeführten Schnittstelle. Wir werden in späteren Kapiteln lernen, wie man mit Datenbanken bzw. Dateien arbeitet.
 
 In einem File RPGPlayersInMySQL.java:
 
 ```java
 // Java
 
-public class RPGPlayersInMySQL implements IDataPersistingMechanism {
+public class RPGPlayersInMySQL implements DataPersistingMechanism {
 
     private static java.sql.Connection connection;
 
@@ -86,16 +92,14 @@ In einem File RPGPlayersAsJSONFile.java:
 ```java
 // Java
 
-public class RPGPlayersAsJSONFile implements IDataPersistingMechanism {
-    
-    private java.io.File jsonFile;
+public class RPGPlayersAsJSONFile implements DataPersistingMechanism {
 
     public RPGPlayersAsJSONFile([...]){
         [...]
     }
 
-    private java.sql.Connection getInstance(){
-        // Wenn jsonFile == null oder geschlossen ==> neues File erstellen
+    private java.io.File getFile(boolean writeable){
+        // Wenn jsonFile == null oder geschlossen ==> File öffnen (sofern bereits vorhanden, ansonsten erstellen)
         // jsonFile zurückgeben
     }
 
@@ -132,7 +136,7 @@ public class RPGPlayersAsJSONFile implements IDataPersistingMechanism {
 
 ```
 
-Mehr zu Datenbankanbindungen bzw. Nutzung von Dateien in Programmen in den Kapiteln "Datenbankanbindung: JDBC" und "Mit Dateien arbeiten".
+Mehr zu Datenbankanbindungen bzw. Nutzung von Dateien in Programmen in den Kapiteln "Datenbanken" und "Mit Dateien arbeiten".
 
 ## Wie wende ich es in meiner Business Logik an...
 
@@ -143,7 +147,7 @@ In unseren Beispielen würde es wie folgt aussehen.
 ```java
 // Java
 
-IDataPersistingMechanism dataPersisting = null;
+DataPersistingMechanism dataPersisting = null;
 
 // Hier der einzige Part in der Business Logik, in dem die tatsächlich verwendete Implementierung definiert wird
 switch (Configuration.persistingLogic){

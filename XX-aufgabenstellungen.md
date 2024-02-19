@@ -32,8 +32,15 @@ Ein Quadrat ist im Prinzip nur eine spezielle Art von Rechteck - ein Rechteck de
 
 ### Tests
 
-Am besten wäre es, wenn du für jede konkrete, instanzierbare (=nicht abstrakt) Klasse, also Circle, Rectangle und Square eine Testklasse erzeugst und die Umfangs- und Flächenberechnung für 2 verschiedene Beispiele pro Klasse testet. Schreibe außerdem Tests, welche verifizieren dass bei Übergabe einer negativen Zahl oder null eine IllegalArgumentException geworfen wird.
+Erstelle für jede konkrete, instanzierbare (=nicht abstrakt) Klasse, also Circle, Rectangle und Square eine Testklasse, die Umfangs- und Flächenberechnung für 2 verschiedene Beispiele pro Klasse testet. Schreibe außerdem Tests, welche verifizieren, dass bei Übergabe einer negativen Zahl oder null eine IllegalArgumentException geworfen wird.
 
 implement a test program Main.java, that creates several instances and prints area and perimeter practice rigorous information hiding: all members should be private unless you really really need them not to be. your test code should exhibit the principles of polymorphism, e.g. write Shape s = new Rectangle(4.0, 4.5) rather thanRectangle r = new Rectangle(...) the number pi is defined in Math.PI
+
+### Abnahmekriterien
+
+- Das Programm entspricht den Anforderungen
+- Die Vererbung wird überall dort verwendet, wo es Sinn macht, insbesondere wenn eine Klasse ein Sonderfall einer anderen Klasse darstellt.
+- Die Unittests decken alle Normal- und Grenzfälle ab.
+- Die Variablen-, Methoden- und Klassennamen sind aussagekräftig
 
 Zurück zur [Startseite](README.md)
