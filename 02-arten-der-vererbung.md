@@ -26,11 +26,11 @@ Die **Basisklasse** definiert also alle gemeinsamen Attribute, aber auch die gem
 
 Die **spezifischen Klassen** erben all diese gemeinsamen Attribute bzw. Methoden und können zusätzliche Attribute und Methoden aufweisen. Auch können gemeinsame Methoden in der spezifischen Klasse durch eine spezifischere Implementierung überschrieben werden.
 
-In manchen Fällen macht es keinen Sinn, eine eigene Instanz der **Basisklasse** erstellen zu können, weil das entstandene Objekt nicht alles bietet, was es braucht, um sinnvoll zu sein. In einem solchen Falle wird der Modifer **abstract** verwendet. **abstract**-Klassen sind solche Klassen, von denen geerbt werden muss, um sie verwenden zu können. 
+In manchen Fällen macht es keinen Sinn, eine eigene Instanz der **Basisklasse** erstellen zu können, weil das entstandene Objekt nicht alles bietet, was es braucht, um sinnvoll zu sein. In einem solchen Falle wird der Modifer `abstract` verwendet. `abstract`-Klassen sind solche Klassen, von denen geerbt werden muss, um sie verwenden zu können. 
 
 > [!IMPORTANT]
-> **abstract**-Klassen sind solche Klassen, von denen geerbt werden muss, um sie verwenden zu können. 
+> `abstract`-Klassen sind solche Klassen, von denen geerbt werden muss, um sie verwenden zu können. 
 >
-> ACHTUNG! Von **final**-Klassen kann, wie der Name schon sagt, nicht geerbt werden.
+> ACHTUNG! Von `final`-Klassen kann, wie der Name schon sagt, nicht geerbt werden.
 
 Zurück zur [Startseite](README.md)
