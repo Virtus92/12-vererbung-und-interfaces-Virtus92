@@ -1,6 +1,6 @@
 # Problemstellung
 
-Es kommt in der Softwareentwicklung sehr häufig vor, dass verschiedene Objekte verwendet werden, die viele Gemeinsamkeiten besitzen und nur wenige Unterschiede. 
+Es kommt in der Softwareentwicklung häufig vor, dass verschiedene Objekte verwendet werden, die viele Gemeinsamkeiten besitzen und nur wenige Unterschiede. 
 
 Da die Grundidee in der objektorientierten Programmierung die ist, dass jede Gelegenheit genutzt werden soll, bestehenden Code zu verwenden, wurde die Vererbung von Klassen ins Leben gerufen.
 
