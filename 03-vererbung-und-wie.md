@@ -22,7 +22,7 @@ public class Warrior {
     }
 
     public void swingSword() {
-        System.out.println("pheeew 🗡️");
+        System.out.println("pheeew \uD83D\uDDE1");
     }
 }
 ```
@@ -41,7 +41,7 @@ public class Wizard {
     }
 
     public void makeMagic() {
-        System.out.println("Magic! 🪄 ✨️");
+        System.out.println("Magic! \uD83E\uDE84");
     }
 }
 ```
@@ -60,7 +60,7 @@ public class Elf{
     }
 
     public void shootArrow() {
-        System.out.println("---> 💚");
+        System.out.println("---> \uD83D\uDC9A");
     }
 }
 ```
@@ -79,7 +79,7 @@ public class Warrior {
     }
 
     public void swingSword() {
-        Console.WriteLine("pheeew 🗡️");
+        Console.WriteLine("pheeew \uD83D\uDDE1");
     }
 }
 ```
@@ -98,7 +98,7 @@ public class Wizard {
     }
 
     public void makeMagic() {
-        Console.WriteLine("Magic! 🪄 ✨️");
+        Console.WriteLine("Magic! \uD83E\uDE84");
     }
 }
 ```
@@ -117,7 +117,7 @@ public class Elf {
     }
 
     public void shootArrow() {
-        Console.WriteLine("---> 💚");
+        Console.WriteLine("---> \uD83D\uDC9A");
     }
 }
 ```
@@ -267,7 +267,7 @@ public class Warrior extends RPGCharacter {
     }
 
     public void swingSword() {
-        System.out.println("pheeew 🗡️");
+        System.out.println("pheeew \uD83D\uDDE1");
     }
 }
 ```
@@ -279,7 +279,7 @@ public class Wizard extends RPGCharacter {
         super(name, gender, 3);
     }
     public void makeMagic() {
-        System.out.println("Magic! 🪄 ✨️");
+        System.out.println("Magic! \uD83E\uDE84");
     }
 }
 ```
@@ -293,7 +293,7 @@ public class Elf extends RPGCharacter {
     }
 
     public void shootArrow() {
-        System.out.println("---> 💚");
+        System.out.println("---> \uD83D\uDC9A");
     }
 }
 ```
@@ -307,7 +307,7 @@ public class Warrior : RPGCharacter
     }
 
     private void SwingSword() {
-        Console.WriteLine("pheeew 🗡️");
+        Console.WriteLine("pheeew \uD83D\uDDE1");
     }
 }
 ```
@@ -321,7 +321,7 @@ public class Wizard : RPGCharacter
     }
 
     private void MakeMagic() {
-        Console.WriteLine("Magic! 🪄 ✨️");
+        Console.WriteLine("Magic! \uD83E\uDE84");
     }
 }
 ```
@@ -335,7 +335,7 @@ public class Elf : RPGCharacter
     }
 
     private void ShootArrow() {
-        Console.WriteLine("---> 💚");
+        Console.WriteLine("---> \uD83D\uDC9A");
     }
 }
 ```

@@ -70,7 +70,7 @@ Wir implementieren also die Methode `showOff()`:
 public class Warrior extends RPGCharacter {
     // constructor
     public void swingSword() {
-        System.out.println("pheeew \uD83D\uDDE1️ ");
+        System.out.println("pheeew \uD83D\uDDE1️");
     }
 
     @Override
@@ -86,7 +86,7 @@ public class Warrior extends RPGCharacter {
 public class Wizard extends RPGCharacter {
     // constructor
     public void makeMagic() {
-        System.out.println("Magic! \uD83E\uDE84 ✨️ ");
+        System.out.println("Magic! \uD83E\uDE84");
     }
 
     @Override
