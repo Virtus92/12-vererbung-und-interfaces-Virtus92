@@ -37,13 +37,13 @@ public abstract class RPGCharacter {
 ```csharp
 // C#
 
-public abstract class Character
+public abstract class RPGCharacter
 {
     protected string Name { get; set; }
     protected string Gender { get; set; }
     protected int HealthPoints { get; set; }
 
-    protected Character(string name, string gender, int healthPoints)
+    protected RPGCharacter(string name, string gender, int healthPoints)
     {
         Name = name;
         Gender = gender;
@@ -126,7 +126,7 @@ public class Warrior : RPGCharacter
     }
 
     private void SwingSword() {
-        Console.WriteLine("pheeew 🗡️");
+        Console.WriteLine("pheeew  \uD83D\uDDE1️");
     }
 }
 ```
@@ -144,7 +144,7 @@ public class Wizard : RPGCharacter
     }
 
     private void MakeMagic() {
-        Console.WriteLine("Magic! 🪄 ✨️");
+        Console.WriteLine("Magic! \uD83E\uDE84");
     }
 }
 ```
@@ -162,7 +162,8 @@ public class Elf : RPGCharacter
     }
 
     private void ShootArrow() {
-        Console.WriteLine("---> 💚");
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.WriteLine("---> \uD83D\uDC9A");
     }
 }
 
@@ -179,7 +180,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         // Liste von Object erstellen
-        List<Object> characters = new ArrayList<>();
+        List<RPGCharacter> characters = new ArrayList<>();
 
         // Charaktere zur Liste hinzufügen
         characters.add(new Warrior("Aragorn", "Male", 100));
@@ -202,10 +203,14 @@ public class Main {
 using System;
 using System.Collections.Generic;
 
-class Program {
-    static void Main() {
+public class Program
+{
+    public static void Main()
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
         // Erstellen einer Liste, die alle Charakterobjekte speichert
-        List<object> characters = new List<object> {
+        List<RPGCharacter> characters = new List<RPGCharacter> {
             new Warrior("Aragorn", "Male", 100),
             new Warrior("Éowyn", "Female", 100),
             new Wizard("Gandalf", "Male", 80),
@@ -215,16 +220,9 @@ class Program {
         };
 
         // Durch die Liste iterieren und den spezifischen Aktionen aufrufen
-        foreach (var character in characters) {
-            if (character is Warrior warrior) {
-                warrior.SwingSword();
-            }
-            else if (character is Wizard wizard) {
-                wizard.MakeMagic();
-            }
-            else if (character is Elf elf) {
-                elf.ShootArrow();
-            }
+        foreach (RPGCharacter character in characters)
+        {
+            character.showOff();
         }
     }
 }
@@ -234,12 +232,15 @@ class Program {
 Das Ergebnis sieht in der Konsole genauso aus wie vorhin:
 
 ```
-pheeew 🗡️ 
-Magic! 🪄 ✨️ 
+pheeew 🗡
+pheeew 🗡
+Magic! 🪄
+Magic! 🪄
+---> 💚
 ---> 💚
 ```
 
-Jetzt ist es wirklich irrelevant, wie viele Subklassen von `RPGCharacter` es gibt. Diese Schleife wird immer funktionieren!
+Jetzt ist es irrelevant, wie viele Subklassen von `RPGCharacter` es gibt. Diese Schleife wird immer funktionieren!
 
 So haben wir den Aufwand für die Erstellung und Einbindung einer neuen Subklasse im Programm auf ein Minimum reduziert.
 

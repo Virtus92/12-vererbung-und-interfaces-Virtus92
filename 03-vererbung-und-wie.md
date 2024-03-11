@@ -225,13 +225,13 @@ public abstract class RPGCharacter {
 ```
 
 ```csharp
-public abstract class Character
+public abstract class RPGCharacter
 {
     protected string Name { get; set; }
     protected string Gender { get; set; }
     protected int HealthPoints { get; set; }
 
-    protected Character(string name, string gender, int healthPoints)
+    protected RPGCharacter(string name, string gender, int healthPoints)
     {
         Name = name;
         Gender = gender;
@@ -300,7 +300,7 @@ public class Elf extends RPGCharacter {
 
 ```csharp
 // C# 
-public class Warrior : Character
+public class Warrior : RPGCharacter
 {
     public Warrior(string name, string gender, int healthPoints)
         : base(name, gender, healthPoints) {
@@ -314,7 +314,7 @@ public class Warrior : Character
 
 ```csharp
 // C# 
-public class Wizard : Character
+public class Wizard : RPGCharacter
 {
     public Wizard(string name, string gender, int healthPoints)
         : base(name, gender, healthPoints) {
@@ -328,7 +328,7 @@ public class Wizard : Character
 
 ```csharp
 // C# 
-public class Elf : Character
+public class Elf : RPGCharacter
 {
     public Elf(string name, string gender, int healthPoints)
         : base(name, gender, healthPoints) {
@@ -401,6 +401,13 @@ class Program
         }
     }
 }
+```
+
+Diese Methode würde folgendes ausgeben:
+```
+RPGGame.Warrior
+RPGGame.Wizard
+RPGGame.Elf
 ```
 
 Obwohl wir also die einzelnen Instanzen in einer Liste von RPGCharacter speichern, sehen wir durch die Ausgabe auf die Konsole dass die einzelnen Elemente noch ihren konkreten Objekttyp haben!
