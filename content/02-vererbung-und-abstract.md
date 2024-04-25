@@ -35,4 +35,4 @@ In manchen Fällen macht es keinen Sinn, eine eigene Instanz der **Basisklasse**
 >
 > ACHTUNG! Von `final`-Klassen kann, wie der Name schon sagt, nicht geerbt werden.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

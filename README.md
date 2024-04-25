@@ -9,13 +9,13 @@ Der Teilnehmer/die Teilnehmerin kann nach erfolgreicher Absolvierung dieses Them
 
 ## Inhaltsverzeichnis
 
-1. [Problemstellung](01-problemstellung.md)
-1. [Welche Art von Klassen können bzw. müssen vererbt werden?](02-vererbung-und-abstract.md)
-1. [Wie funktioniert die Vererbung von Klassen?](03-vererbung-und-wie.md)
-1. [Objekttypen und "Kompatibilität"](04-type-cast-instanceof.md)
-1. [abstract-Klasse und -Methoden](05-abstract-class-methods.md)
-1. [Schnittstellen und Anwendungsfälle](06-schnittstellen.md)
-1. [Aufgabenstellung](XX-aufgabenstellung.md)
+1. [Problemstellung](content/01-problemstellung.md)
+1. [Welche Art von Klassen können bzw. müssen vererbt werden?](content/02-vererbung-und-abstract.md)
+1. [Wie funktioniert die Vererbung von Klassen?](content/03-vererbung-und-wie.md)
+1. [Objekttypen und "Kompatibilität"](content/04-type-cast-instanceof.md)
+1. [abstract-Klasse und -Methoden](content/05-abstract-class-methods.md)
+1. [Schnittstellen und Anwendungsfälle](content/06-schnittstellen.md)
+1. [Aufgabenstellung](content/XX-aufgabenstellungen.md)
 
 ## weiterführende Inhalte
 

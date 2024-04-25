@@ -68,7 +68,7 @@ public class RPGPlayersInMySQL implements DataPersistingMechanism {
     private static java.sql.Connection connection;
 
     public RPGPlayersInMySQL([...]){
-        [...]
+        // Code des Konstruktors
     }
 
     private static java.sql.Connection getInstance(){
@@ -163,7 +163,7 @@ In einem File RPGPlayersAsJSONFile.java:
 public class RPGPlayersAsJSONFile implements DataPersistingMechanism {
 
     public RPGPlayersAsJSONFile([...]){
-        [...]
+        // Code des Konstruktors
     }
 
     private java.io.File getFile(boolean writeable){
@@ -306,4 +306,4 @@ dataPersisting.CreateRPGPlayer(player);
 
 Auf die Anwendung von Interfaces werden wir im Kapitel "Datenbanken" zurückkommen.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

@@ -244,4 +244,4 @@ Jetzt ist es irrelevant, wie viele Subklassen von `RPGCharacter` es gibt. Diese 
 
 So haben wir den Aufwand für die Erstellung und Einbindung einer neuen Subklasse im Programm auf ein Minimum reduziert.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

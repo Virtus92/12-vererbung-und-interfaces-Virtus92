@@ -45,4 +45,4 @@ implement a test program Main.java, that creates several instances and prints ar
 - Der Code ist gut strukturiert (Siehe Clean Code).
 - Der Code ist in GITHub eingecheckt.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

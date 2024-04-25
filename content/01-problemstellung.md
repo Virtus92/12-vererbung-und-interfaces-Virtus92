@@ -10,7 +10,7 @@ Man könnte es auch so formulieren, dass ein guter Entwickler möglichst "faul" 
 
 Um dies zu realisieren werden wir in den folgenden Kapiteln darstellen, wie Vererbung in der Softwareentwicklung funktioniert und was abstract-Klassen und -Methoden sind.
 
-![Remove Code Duplication](img/remove-code-duplication.png)
+![Remove Code Duplication](../img/remove-code-duplication.png)
 
 Weiters gilt eine weitere Grundregel: 
 
@@ -18,4 +18,4 @@ Weiters gilt eine weitere Grundregel:
 
 Zu diesem Thema werden wir lernen, was Schnittstellen sind und wie diese anzuwenden sind.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

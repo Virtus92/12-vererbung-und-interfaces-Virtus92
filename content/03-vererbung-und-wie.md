@@ -243,7 +243,7 @@ public abstract class RPGCharacter
 }
 ```
 
-![Code-Duplikate entfernen! Yeah!](img/remove-code-duplication.png)
+![Code-Duplikate entfernen! Yeah!](../img/remove-code-duplication.png)
 
 > [!IMPORTANT]
 > Auch wenn die Klasse `RPGCharacter` einen Konstruktor besitzt, kann diese nicht instanziert werden, weil sie `abstract` ist. Lediglich ihre Subklassen können den Konstruktor verwenden!
@@ -413,4 +413,4 @@ RPGGame.Elf
 Obwohl wir also die einzelnen Instanzen in einer Liste von RPGCharacter speichern, sehen wir durch die Ausgabe auf die Konsole dass die einzelnen Elemente noch ihren konkreten Objekttyp haben!
 Das heißt `aragorn` wird zwar zu der Liste von Charakteren als `RPGCharacter` hinzugefügt, bleibt aber trotzdem noch ein `Warrior` genauso wie gandalf ein `Wizard` bleibt.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

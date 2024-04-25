@@ -105,4 +105,4 @@ pheeew 🗡️
 Magic! 🪄 ✨️ 
 ---> 💚
 ```
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)
