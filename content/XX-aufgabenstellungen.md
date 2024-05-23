@@ -24,7 +24,7 @@ Ein Kreis hat als zusätzliche Eigenschaft einen radius und erweitert die Shape 
 
 ### Rectangle
 
-Ein Rechteck hat als zusätzliche Eigenschaften eine 'width' und 'length' und erweitert wie die Kreis Klasse die Form und muss dadurch ebenfalls die 'getArea' und 'getPerimeter' Methode implementieren. Sind Breite oder Länge negativ oder null soll eine 'IllegalArgumentException' geworfen werden.
+Ein Rechteck hat als zusätzliche Eigenschaften eine 'width' und 'length' und erweitert wie die Kreis-Klasse die Form und muss dadurch ebenfalls die 'getArea' und 'getPerimeter' Methode implementieren. Sind Breite oder Länge negativ oder null soll eine 'IllegalArgumentException' geworfen werden.
 
 ### Square
 
@@ -40,7 +40,7 @@ implement a test program Main.java, that creates several instances and prints ar
 
 - Das Programm entspricht den oben angeführten Anforderungen.
 - Die Vererbung wird überall dort verwendet, wo es Sinn macht, insbesondere wenn eine Klasse ein Sonderfall einer anderen Klasse darstellt.
-- Die Unittests decken alle Normal- und Grenzfälle ab.
+- Alle Normal- und Grenzfälle werden abgetestet.
 - Die Variablen-/Methoden-/Klassennamen sind aussagekräftig.
 - Der Code ist gut strukturiert (Siehe Clean Code).
 - Der Code ist in GITHub eingecheckt.
